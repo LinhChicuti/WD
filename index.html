@@ -14,73 +14,83 @@
         <div class="container main">
             <div class="row">
                 <div class="col-md-6 side-image">
-                    <div class="slideshow-container">
-                        <div class="mySlides fade">
-                        <img src="./image/a2.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides fade">
-                        <img src="./image/a4.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides fade">
-                        <img src="./image/a5.jpg" style="width:100%">
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
                     <div class="text">
                         <p>~ Tình yêu biến những bất hạnh trở thành hạnh phúc ~</p>
                     </div>
                 </div>
                 <div class="col-md-6 right">
-                     <div class="input-box">
-                        <h3>Đăng nhập</h3>
-                        <br>
-                        <div class="input-field">
-                            <input type="text" class="input" id="name" required>
-                            <label for="text">Tên đăng nhập</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" class="input" id="password" required>
-                            <label for="password">Mật khẩu</label>
-                        </div>
-                        <div class="form-check" style="font-size:small">
-                                <input type="checkbox" class="form-check-input" id="formCheck">
-                                <label for="formCheck" class="form-check-label text-secondary" style="font-size:15px">Lưu mật khẩu</label>
-                        </div>
-                        <br>
-                        <div class="input-field">
-                            <input type="submit" class="submit" value="Đăng nhập"> 
-                        </div>
-                        <br>
-                        <div class="input-field">
-                            <button class="btn btn-lg btn-light w-100 fs-6"><i class="fa-brands fa-google" style="color: #ff91c6;"></i> Đăng nhập với Google</button>
-                        </div>
-                        <div class="signin">
-                            <span>Bạn chưa có tài khoản? <a href="#">Đăng ký tại đây</a></span>
-                        </div>
-                     </div>
+                    <div class="sign-up-box" id="signin">
+                            <h3>Đăng nhập</h3>
+                            <br>
+                            <div class="sign-up-field">
+                                <input type="text" class="sign-up" id="name" required>
+                                <label for="text">Tên đăng nhập</label>
+                            </div>
+                            <div class="sign-up-field">
+                                <input type="password" class="sign-up" id="password" required>
+                                <label for="password">Mật khẩu</label>
+                            </div>
+                            <div class="form-check" style="font-size:small">
+                                    <input type="checkbox" class="form-check-input" id="formCheck">
+                                    <label for="formCheck" class="form-check-label text-secondary" style="font-size:15px">Lưu mật khẩu</label>
+                            </div>
+                            <br>
+                            <div class="sign-up-field">
+                                <input type="submit" class="submit" value="Đăng nhập"> 
+                            </div>
+                            <div class="signin">
+                                <span>Bạn chưa có tài khoản?</span>
+                                <br><br>
+                                <button onclick="myFunction()" class="button1">Đăng Ký</button>
+                            </div>
+                    </div>
+                    <div class="sign-in-box" id="signup">
+                            <h3>Đăng ký</h3>
+                            <br>
+                            <div class="sign-in-field">
+                                <input type="text" class="sign-in" id="name" required>
+                                <label for="text">Tên tài khoản</label>
+                            </div>
+                            <div class="sign-in-field">
+                                <input type="text" class="sign-in" id="name" required>
+                                <label for="text">Email</label>
+                            </div>
+                            <div class="sign-in-field">
+                                <input type="password" class="sign-in" id="password" required>
+                                <label for="password">Mật khẩu</label>
+                            </div>
+                            <div class="form-check" style="font-size:small">
+                                    <input type="checkbox" class="form-check-input" id="formCheck">
+                                    <label for="formCheck" class="form-check-label text-secondary" style="font-size:15px">Lưu mật khẩu</label>
+                            </div>
+                            <br>
+                            <div class="sign-in-field">
+                                <input type="submit" class="submit" value="Đăng ký"> 
+                            </div>
+                            <br>
+                            <div class="signup">
+                                <span>Bạn đã có tài khoản?</span>
+                                <br><br>
+                                <button onclick="myFunction()" class="button1">Đăng Nhập</button>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        let slideIndex = 0;
-        showSlides();
-        function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        function myFunction() {
+        var x = document.getElementById('signup');
+        var y = document.getElementById('signin');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+            y.style.display = 'none';
+        } 
+        else {
+            x.style.display = 'none';
+            y.style.display = 'block';
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 2000);
-        }   
+        }
     </script>
 </body>
 </html>
